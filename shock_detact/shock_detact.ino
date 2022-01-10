@@ -1,4 +1,4 @@
-/*Vibration sensor connected to Arduino pins as follows:
+ /*Vibration sensor connected to Arduino pins as follows:
  Arduino            Vibration Sensor
    D3                    DOut
    GND                   GND
@@ -24,10 +24,9 @@ void loop() {
     delay(50);
 
 
-    //if the sensor detacted pulses 3 times or more per 50ms, count +1
+    //if the sensor detacted pulses 3 times or more per 50ms, print shock!!
     if(Vibe_count >= 3){
       Serial.println("SHOCK!!");
-      Vibe_count = 0;
     }
   }
   //initialize counter
